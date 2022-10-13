@@ -1,2 +1,2 @@
-# spsolver
+# xmat
 sparse matrix solver

@@ -17,6 +17,7 @@ FetchContent_MakeAvailable(googletest)
 
 # === add xmat ===
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set_target_properties(xmat PROPERTIES LINKER_LANGUAGE CXX)
 
 add_subdirectory(xmat)
 add_library(xmat ALIAS xmat)

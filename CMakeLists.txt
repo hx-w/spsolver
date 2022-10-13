@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(xmat_lib)
+project(xmat_lib VERSION 0.1.0)
 
 # GoogleTest requires at least C++14
 set(CMAKE_CXX_STANDARD 17)
@@ -17,9 +17,9 @@ FetchContent_MakeAvailable(googletest)
 
 # === add xmat ===
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-
 add_subdirectory(xmat)
-add_library(xmat ALIAS xmat)
+add_library(xmat::xmat ALIAS xmat)
+set_target_properties(xmat PROPERTIES LINKER_LANGUAGE CXX)
 
 FIND_PACKAGE(OpenMP REQUIRED)
 

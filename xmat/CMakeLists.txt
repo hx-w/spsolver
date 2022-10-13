@@ -5,5 +5,3 @@ add_library(xmat ${SRCS} ${HEADERS} ${HPPS})
 target_include_directories(xmat INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 
 install(TARGETS xmat EXPORT xmat)
-
-# link pthread
